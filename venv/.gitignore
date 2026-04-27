@@ -1,0 +1,15 @@
+# Entorno virtual
+venv/
+env/
+ENV/
+
+# Archivos de configuración sensible
+.env
+
+# Cache de Python
+__pycache__/
+*.pyc
+
+# Cursor / AI
+.cursorrules
+.cursor/
