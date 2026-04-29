@@ -2,7 +2,7 @@ from fastapi import FastAPI
 # Aquí importamos el "robot" y las "llaves" de las bases de datos
 from database import run_query, get_pedidos_connection, get_aprovisionamiento_connection
 from pydantic import BaseModel
-
+from config import DEPLOY_HOST, DEPLOY_PORT
 # Esto crea un "Schema" personalizado
 class Pedido(BaseModel):
     PedidoID: int
@@ -56,7 +56,7 @@ if __name__ == "__main__":
     import uvicorn
 
     uvicorn.run(
-        "app:app",
+        "main:app",
         host=DEPLOY_HOST,
         port=DEPLOY_PORT,
         reload=True,
